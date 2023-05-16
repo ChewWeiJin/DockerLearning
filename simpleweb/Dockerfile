@@ -1,8 +1,10 @@
 # Specify base image
 FROM node:14-alpine
 
-#copy file systems
+#include a new working directory
+WORKDIR /usr/app
 
+#copy file systems
 COPY ./ ./
 
 #Install dependencies
