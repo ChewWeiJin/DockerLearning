@@ -5,10 +5,12 @@ FROM node:14-alpine
 WORKDIR /usr/app
 
 #copy file systems
-COPY ./ ./
+COPY ./package.json ./
 
 #Install dependencies
 RUN npm install 
+
+COPY ./ ./
 
 #Default cmd
 CMD ["npm","start"]
